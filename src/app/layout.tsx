@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from 'next/font/google';
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/Scroll";
+import Experience from "@/components/Experience";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap', // 'swap' is generally a good choice for a fast display
+  variable: '--font-poppins', // You can use this with Tailwind CSS
+  weight: ['400', '500', '600', '700'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en"  >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${poppins.variable} antialiased`}
       >
-        {children}
+        <Header />
+          <main className="flex-1">{children}</main>
+        <ScrollToTopButton />
+        <Experience />
+        <Footer />
       </body>
     </html>
   );
