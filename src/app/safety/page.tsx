@@ -59,23 +59,6 @@ export default function SafetyPage() {
       renderer.setPixelRatio(window.devicePixelRatio);
       camera.position.z = 5;
 
-      // Changed particle color for the light theme
-
-
-
- 
-
-
-      const animate = () => {
-        requestAnimationFrame(animate);
-
-        // Animate particles
-        ;
-
-      };
-
-      animate();
-
       const handleResize = () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
@@ -141,7 +124,7 @@ export default function SafetyPage() {
 
         <div className="relative z-10 p-6 md:p-12 max-w-7xl mx-auto ">
           {/* Hero Section */}
-          <section className="text-center bg-[#fcd129] py-20 " ref={addToRefs}>
+          <section className="text-center bg-[#fcd129]  py-20 " ref={addToRefs}>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
               Our Commitment to Your Safety
             </h1>
@@ -151,7 +134,7 @@ export default function SafetyPage() {
           </section>
 
           {/* Table of Contents and Main Content */}
-          <div className="flex flex-col md:flex-row gap-12">
+          <div className="flex flex-col md:flex-row gap-12 py-6">
             {/* Table of Contents */}
             <aside className="w-full md:w-1/4 sticky top-12 self-start p-4 bg-gray-100 rounded-lg shadow-xl" ref={addToRefs}>
               <h3 className="text-lg font-bold text-gray-900 mb-4">Table of Contents</h3>
@@ -172,7 +155,7 @@ export default function SafetyPage() {
             </aside>
 
             {/* Main Content Sections */}
-            <div className="w-full md:w-3/4 space-y-16">
+            <div className="w-full md:w-3/4 space-y-16 py-6">
               {safetyGuidelines.map((section) => (
                 <section key={section.id} id={section.id} ref={addToRefs}>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">

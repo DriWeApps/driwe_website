@@ -102,7 +102,7 @@ export default function Home() {
       type: "Auto",
       description: "Budget-friendly for 2-3 passengers",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR5EgT5Ud-4sbsf-1jKeLQtAuex1hB0alNdw&s",
+        "https://truckcdn.cardekho.com/in/bajaj/compact-4s/bajaj-compact-4s-48935.jpg",
     },
   ];
 
@@ -121,14 +121,14 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-[#fcd129] hover:bg-gray-50 hover:text-orange-500 font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-[#fcd129] border border-black hover:bg-gray-50 hover:text-orange-500 font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Book Now
               </Button>
             <Button
               size="lg"
               variant="outline"
-                className="bg-white text-[#fcd129] hover:bg-gray-50 hover:text-orange-500 font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-[#fcd129] border border-black hover:bg-gray-50 hover:text-orange-500 font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Learn More
             </Button>
@@ -166,7 +166,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     
                       {/* <span className="text-sm font-medium text-gray-500">{service.price}</span> */}
-                      <Button className="bg-[#fcd129] from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white text-sm px-4 py-2 rounded-lg transition-all duration-300">
+                      <Button className="bg-[#fcd129] border border-black  from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black text-sm px-4 py-2 rounded-lg transition-all duration-300">
                         Book Now
                       </Button>
                     

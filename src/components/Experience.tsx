@@ -27,7 +27,7 @@ export default function CallToAction() {
             <button className="border border-black hover:border-none bg-[#fcd129] text-black shadow-xl hover:bg-yellow-500 hover:text- text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
               Book Now
             </button>
-            <button className="border border-white shadow-xl hover:text-black text-white text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-white hover:text-[#fcd129]">
+            <button className="border border-black shadow-xl hover:text-black text-white text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-white hover:text-[#fcd129] ">
               Become a Driver
             </button>
           </div>

@@ -114,34 +114,13 @@ export default function SupportPage() {
       <div ref={threeRef} className="absolute inset-0 -z-10 pointer-events-none opacity-20" />
 
       {/* Hero Section */}
-      <section className="bg-[#fcd129] py-20">
-        <div className="max-w-3xl mx-auto text-center px-4">
-          <h1 className="text-[28px] tracking-wide font-medium">How can we help you?</h1>
-          <p className="mt-2 text-sm text-gray-500">
-            Get quick answers to common questions or contact our support team
-          </p>
-
-          {/* Search Bar */}
-          <div className="mt-6">
-            <div className="relative mx-auto w-full max-w-md">
-              <input
-                aria-label="Search help"
-                className="w-full rounded-full border border-gray-200 px-4 py-2 pl-12 text-sm placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-200"
-                placeholder="Search for help..."
-              />
-              <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
-              <button
-                className="absolute right-1.5 top-1.5 rounded-full p-1"
-                aria-label="Search button"
-                style={{ background: solidColor }}
-              >
-                <Search className="w-4 h-4 text-white" />
-              </button>
-            </div>
-          </div>
+            <section className="bg-[#fcd129] py-20">
+        <div className="mx-auto max-w-7xl px-4 py-12 text-center animate-[fadeUp_0.6s_ease-in-out_forwards]">
+          <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">How can we help you?</h1>
+          <p className="mt-2 text-slate-700">Get quick answers to common questions or contact our support team</p>
         </div>
       </section>
-
+      
       {/* Help Category Section */}
       <section className="bg-gray-50 py-10">
         <div className="max-w-5xl mx-auto px-4">

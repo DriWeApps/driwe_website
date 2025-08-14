@@ -62,12 +62,15 @@ export default function Footer() {
               <Link href="/privacy" className="hover:text-yellow-500 transition-colors">
                 Privacy Policy
               </Link>
+              <Link href="/safety" className="hover:text-yellow-500 transition-colors">
+                Safety
+              </Link>
             </nav>
           </div>
 
           <div className="space-y-4">
             <h4 className="font-semibold text-base md:text-lg">Follow Us</h4>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3">
               <Link
                 href="https://www.facebook.com/profile.php?id=61575003763571"
                 target="_blank"

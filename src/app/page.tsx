@@ -30,7 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
       type: "Auto",
       description: "Budget-friendly for 2-3 passengers",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR5EgT5Ud-4sbsf-1jKeLQtAuex1hB0alNdw&s",
+        "https://truckcdn.cardekho.com/in/bajaj/compact-4s/bajaj-compact-4s-48935.jpg",
     },
   ];
 export default function LandingPage() {
@@ -91,28 +91,32 @@ export default function LandingPage() {
 
           <div className="relative max-w-3xl mx-auto z-5">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-yellow-400 h-full"></div>
-            {[
-             { text: "City Rides\nExperience quick seamless and convenient rides anywhere within the city Perfect for daily commutes running errands or short trips Getting around has never been easier or more comfortable" },
-{ text: "Airport Transfer\nEnjoy reliable airport pickups and drops with precise flight tracking and included waiting time Our professional drivers ensure you reach your destination on time every time" },
-{ text: "Goods Transport\nTransport your packages furniture and commercial goods safely and securely We handle every delivery with care making sure your items reach their destination intact and on schedule" },
-{ text: "Full Day Rides\nBook a car for multiple hours or an entire day for meetings shopping sightseeing or any special plans Enjoy a flexible comfortable and stress free travel experience tailored to your needs" },
+           {[
+  { text: "City Rides\nExperience quick seamless and convenient rides anywhere within the city. Perfect for daily commutes running errands or short trips. Getting around has never been easier or more comfortable." },
+  { text: "Airport Transfer\nEnjoy reliable airport pickups and drops with precise flight tracking and included waiting time. Our professional drivers ensure you reach your destination on time every time." },
+  { text: "Goods Transport\nTransport your packages furniture and commercial goods safely and securely. We handle every delivery with care making sure your items reach their destination intact and on schedule." },
+  { text: "Full Day Rides\nBook a car for multiple hours or an entire day for meetings shopping sightseeing or any special plans. Enjoy a flexible comfortable and stress free travel experience tailored to your needs." },
+].map((item, i) => {
+  const [title, ...descParts] = item.text.split("\n");
+  const description = descParts.join("\n");
 
-            ].map((item, i) => (
-              <div
-                key={i}
-                ref={addJourneyRefs}
-                className={`flex mb-16 items-center flex-col md:flex-row ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-              >
-                <div className="w-full md:w-1/2 px-6">
-                  <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform duration-500 hover:scale-105 hover:-translate-y-1">
-                    <h4 className="text-xl font-bold mb-2">&nbsp;</h4>
-                    <p className="text-sm">{item.text}</p>
-                  </div>
-                </div>
-                <div className="relative w-10 h-10 bg-yellow-400 rounded-full z-20 shadow-lg flex items-center justify-center text-white font-bold my-4 md:my-0"></div>
-                <div className="w-full md:w-1/2"></div>
-              </div>
-            ))}
+  return (
+    <div
+      key={i}
+      ref={addJourneyRefs}
+      className={`flex mb-16 items-center flex-col md:flex-row ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+    >
+      <div className="w-full md:w-1/2 px-6">
+        <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform duration-500 hover:scale-105 hover:-translate-y-1">
+          <h4 className="text-xl font-bold mb-2">{title}</h4>
+          <p className="text-sm">{description}</p>
+        </div>
+      </div>
+      <div className="relative w-10 h-10 bg-yellow-400 rounded-full z-20 shadow-lg flex items-center justify-center text-white font-bold my-4 md:my-0"></div>
+      <div className="w-full md:w-1/2"></div>
+    </div>
+  );
+})}
           </div>
 
           {/* CSS Animations */}

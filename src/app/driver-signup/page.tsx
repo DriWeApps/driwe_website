@@ -123,13 +123,13 @@ export default function DriverSignupPage() {
       {/* Main Content with Signup Form */}
       <section className="relative z-10 w-full bg-white py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="signup-form-container mx-auto max-w-2xl rounded-2xl border border-[#3b006a]/20 bg-[#3b006a]/5 p-8 shadow-2xl">
-            <h2 className="mb-8 text-center text-3xl font-bold text-[#3b006a]">Driver Registration</h2>
+          <div className="signup-form-container mx-auto max-w-2xl rounded-2xl border border-black bg-[#fcd129]/50 p-8 shadow-2xl">
+            <h2 className="mb-8 text-center text-3xl font-bold ">Driver Registration</h2>
             <form className="grid gap-6">
               {/* Personal Information - Restructured as requested */}
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <label htmlFor="firstName" className="text-sm font-medium leading-none text-[#3b006a]">
+                  <label htmlFor="firstName" className="text-sm font-medium leading-none ">
                     First Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -141,7 +141,7 @@ export default function DriverSignupPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="lastName" className="text-sm font-medium leading-none text-[#3b006a]">
+                  <label htmlFor="lastName" className="text-sm font-medium leading-none ">
                     Last Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -155,8 +155,8 @@ export default function DriverSignupPage() {
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium leading-none text-[#3b006a]">
-                    Email Address <span className="text-sm text-[#3b006a]/50">(Optional)</span>
+                  <label htmlFor="email" className="text-sm font-medium leading-none ">
+                    Email Address <span className="text-sm ">(Optional)</span>
                   </label>
                   <input
                     id="email"
@@ -166,13 +166,13 @@ export default function DriverSignupPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium leading-none text-[#3b006a]">
+                  <label htmlFor="phone" className="text-sm font-medium leading-none ">
                     Phone Number <span className="text-red-500">*</span>
                   </label>
                   <input
                     id="phone"
                     type="tel" // Changed to type="tel" for better mobile support
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+91 1234567890"
                     required
                     className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#3b006a]/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   />
@@ -182,7 +182,7 @@ export default function DriverSignupPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="inline-flex h-12 w-full items-center justify-center rounded-md bg-[#fcd129] px-6 py-3 text-sm font-medium text-[#3b006a] shadow transition-colors hover:bg-[#fbd64a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fcd129] focus-visible:ring-offset-2"
+                className="inline-flex h-12 w-full items-center justify-center rounded-md bg-[#fcd129] px-6 py-3 text-sm font-medium  shadow transition-colors hover:bg-[#fbd64a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fcd129] focus-visible:ring-offset-2"
               >
                 Sign Up
               </button>
@@ -195,38 +195,38 @@ export default function DriverSignupPage() {
       <section className="info-card-section w-full bg-white py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#3b006a]">Why Drive With Us?</h2>
+            <h2 className="text-3xl font-bold ">Why Drive With Us?</h2>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Card 1: Flexible Hours */}
-            <div className="info-card rounded-2xl border border-[#3b006a]/20 bg-[#3b006a]/5 p-6 shadow-xl">
+            <div className="info-card rounded-2xl border border-black  p-6 shadow-xl">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#fcd129] text-3xl">
                 ⏰
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-[#3b006a]">Flexible Hours</h3>
-              <p className="text-[#3b006a]/70">
+              <h3 className="mb-2 text-xl font-semibold ">Flexible Hours</h3>
+              <p>
                 Work on your own schedule. Drive full-time or just a few hours a week.
               </p>
             </div>
 
             {/* Card 2: Great Earnings */}
-            <div className="info-card rounded-2xl border border-[#3b006a]/20 bg-[#3b006a]/5 p-6 shadow-xl">
+            <div className="info-card rounded-2xl border border-black p-6 shadow-xl">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#fcd129] text-3xl">
                 💰
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-[#3b006a]">Great Earnings</h3>
-              <p className="text-[#3b006a]/70">
+              <h3 className="mb-2 text-xl font-semibold ">Great Earnings</h3>
+              <p>
                 Our competitive rates and bonuses help you maximize your income on every trip.
               </p>
             </div>
             
             {/* Card 3: Community Support */}
-            <div className="info-card rounded-2xl border border-[#3b006a]/20 bg-[#3b006a]/5 p-6 shadow-xl">
+            <div className="info-card rounded-2xl border border-black p-6 shadow-xl">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#fcd129] text-3xl">
                 🤝
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-[#3b006a]">Community Support</h3>
-              <p className="text-[#3b006a]/70">
+              <h3 className="mb-2 text-xl font-semibold ">Community Support</h3>
+              <p>
                 Join a supportive community of drivers and receive 24/7 in-app assistance.
               </p>
             </div>
@@ -237,8 +237,8 @@ export default function DriverSignupPage() {
       <section className="commitment-section w-full bg-white py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="mb-4 text-3xl font-bold text-[#3b006a]">Our Commitment to You</h2>
-            <p className="text-lg leading-relaxed text-[#3b006a]/80">
+            <h2 className="mb-4 text-3xl font-bold ">Our Commitment to You</h2>
+            <p className="text-lg leading-relaxed ">
               Your safety and success are our top priorities. We are dedicated to providing a fair, transparent, and
               secure platform for all our drivers. We believe in building a partnership that works for you.
             </p>
