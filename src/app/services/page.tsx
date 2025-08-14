@@ -118,7 +118,15 @@ export default function Home() {
             From quick city rides to fleet delivery services, we offer every
             transportation need covered.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="border border-black hover:border-none bg-[#fcd129] text-black shadow-xl hover:bg-yellow-500 hover:text- text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
+              Book Now
+            </button>
+            <button className="border border-black shadow-xl hover:text-black text-white text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-white hover:text-[#fcd129] ">
+              Learn More
+            </button>
+          </div>
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-white text-[#fcd129] border border-black hover:bg-gray-50 hover:text-orange-500 font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
@@ -132,7 +140,7 @@ export default function Home() {
             >
               Learn More
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 

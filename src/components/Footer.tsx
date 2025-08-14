@@ -25,7 +25,7 @@ const FacebookIcon = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-black text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">

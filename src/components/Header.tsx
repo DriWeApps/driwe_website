@@ -162,8 +162,8 @@ const renderMobileHeader = () => (
             className={`
               inline-flex items-center h-10 px-4 rounded-lg transition-colors duration-200
               ${pathname === item.href
-                ? "bg-yellow-100 text-black font-bold"
-                : "text-gray-600 hover:bg-gray-100 hover:text-yellow-600"
+                ? "bg-[#fcd129] text-[#3b006a] font-bold"
+                : "text-gray-600 hover:bg-yellow-100 hover:text-[#3b006a]"
               }
             `}
           >
