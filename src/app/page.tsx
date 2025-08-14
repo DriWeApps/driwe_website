@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import InfiniteAdCarousel from "@/components/InfiniteAdCarousel";
+import { Link } from "lucide-react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +69,22 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-black font-inter">
       {/* Hero / Banner Section */}
-      <InfiniteAdCarousel/>
+      <section
+        ref={(el) => setRef(el as HTMLDivElement | null, 0)}
+        className="relative bg-gray-900 text-white"
+      >
+        <div className="max-w-7xl mx-auto text-center">
+          <Image
+            src="/images/independent.png"
+            alt="DriWE Logo"
+            width={1200}
+            height={400}
+            
+            className="mx-auto h-auto w-full object-cover"  
+            priority
+          />
+        </div>
+      </section>
       
 
       {/* Feature Highlights */}

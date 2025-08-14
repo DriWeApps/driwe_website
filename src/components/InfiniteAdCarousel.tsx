@@ -13,9 +13,9 @@ export default function InfiniteAdCarousel() {
   const adItems = [
     {
       id: 1,
-      title: "Exclusive Discount",
-      description: "Get 20% off on your next 5 rides. Limited time offer!",
-      image: "https://placehold.co/1200x400/F59E0B/FFFFFF?text=Exclusive+Discount",
+      title: "Independent Drivers",
+      description: "Join our network of independent drivers and earn more.",
+      image: "/images/independent.png?width=1200&height=400",
     },
     {
       id: 2,
