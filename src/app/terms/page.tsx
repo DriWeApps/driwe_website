@@ -1,21 +1,13 @@
 "use client";
 
 import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Main TermsPage component
 export default function TermsPage() {
   useEffect(() => {
-    // Check if gsap and ScrollTrigger are available on the window object
-    const gsap = (window as any).gsap;
-    const ScrollTrigger = (window as any).ScrollTrigger;
-
-    // Exit early if the libraries are not loaded
-    if (!gsap || !ScrollTrigger) {
-        console.error('GSAP or ScrollTrigger not found. Make sure the script tags are correctly loaded.');
-        return;
-    }
-
-    // Register GSAP ScrollTrigger plugin after the libraries are loaded
+    // Register GSAP ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
     // === GSAP Scroll-Triggered Animations ===
@@ -102,9 +94,9 @@ export default function TermsPage() {
                 <div className="mb-8 flex items-start space-x-4">
                   <div>
                     <p className="text-lg leading-relaxed text-slate-700">
-                      Welcome to Driwe! These Terms of Service ("Terms") govern your access to and use of the Driwe
-                      mobile application (the "App"), our website, and all related services (collectively, the
-                      "Services"). By accessing or using the Services, you agree to be bound by these Terms. If you do
+                      Welcome to Driwe! These Terms of Service (&quot;Terms&quot;) govern your access to and use of the Driwe
+                      mobile application (the &quot;App&quot;), our website, and all related services (collectively, the
+                      &quot;Services&quot;). By accessing or using the Services, you agree to be bound by these Terms. If you do
                       not agree to these Terms, do not use our Services.
                     </p>
                   </div>
@@ -196,11 +188,6 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
-      
-      {/* External script tags for GSAP */}
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-      {/* Three.js script is no longer needed since it's not being used in the code */}
     </div>
   );
 }

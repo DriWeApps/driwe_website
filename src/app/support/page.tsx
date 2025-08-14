@@ -2,7 +2,6 @@
 
 import React, { useLayoutEffect, useRef, useState } from "react";
 import {
-  Search,
   User,
   Car,
   Check,
@@ -141,7 +140,7 @@ export default function SupportPage() {
                   <User className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-base">I'm a Rider</h3>
+                  <h3 className="font-medium text-base">I&apos;m a Rider</h3>
                   <p className="text-xs text-gray-500 mt-2">
                     Get help with booking rides, payments, and account settings
                   </p>
@@ -172,7 +171,7 @@ export default function SupportPage() {
                   <Car className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-base">I'm a Driver</h3>
+                  <h3 className="font-medium text-base">I&apos;m a Driver</h3>
                   <p className="text-xs text-gray-500 mt-2">
                     Get help with driving, earnings, and vehicle requirements
                   </p>

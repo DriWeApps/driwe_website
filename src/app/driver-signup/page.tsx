@@ -2,20 +2,15 @@
 
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Main DriverSignupPage component
 export default function DriverSignupPage() {
   const mountRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // GSAP and ScrollTrigger setup
-    const gsap = (window as any).gsap;
-    const ScrollTrigger = (window as any).ScrollTrigger;
-
-    if (!gsap || !ScrollTrigger) {
-        console.error('GSAP or ScrollTrigger not found. Make sure the script tags are correctly loaded.');
-        return;
-    }
+    // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger);
 
     // Initial fade-in animation for the hero text
@@ -245,11 +240,6 @@ export default function DriverSignupPage() {
           </div>
         </div>
       </section>
-
-      {/* External script tags for GSAP and Three.js */}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     </div>
   );
 }

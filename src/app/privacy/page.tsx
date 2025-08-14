@@ -2,19 +2,14 @@
 
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function PrivacyPage() {
   const mountRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     // GSAP and ScrollTrigger setup
-    const gsap = (window as any).gsap;
-    const ScrollTrigger = (window as any).ScrollTrigger;
-
-    if (!gsap || !ScrollTrigger) {
-        console.error('GSAP or ScrollTrigger not found. Make sure the script tags are correctly loaded.');
-        return;
-    }
     gsap.registerPlugin(ScrollTrigger);
 
     // Initial fade-in animation for header and table of contents
@@ -110,7 +105,7 @@ export default function PrivacyPage() {
                     6. Cookies and Tracking Technologies
                   </a>
                   <a href="#children" className="block text-sm text-slate-600 transition-colors duration-200 hover:text-slate-900">
-                    7. Children's Privacy
+                    7. Children&apos;s Privacy
                   </a>
                   <a href="#changes" className="block text-sm text-slate-600 transition-colors duration-200 hover:text-slate-900">
                     8. Changes to This Privacy Policy
@@ -217,7 +212,7 @@ export default function PrivacyPage() {
                 </section>
 
                 <section id="children" className="mb-12 content-section">
-                  <h2 className="text-3xl font-bold">7. Children's Privacy</h2>
+                  <h2 className="text-3xl font-bold">7. Children&apos;s Privacy</h2>
                   <p className="leading-relaxed text-slate-700">
                     Our services are not intended for children under 13 years of age. We do not knowingly collect
                     personal information from children under 13.
@@ -228,7 +223,7 @@ export default function PrivacyPage() {
                   <h2 className="text-3xl font-bold">8. Changes to This Privacy Policy</h2>
                   <p className="leading-relaxed text-slate-700">
                     We may update this Privacy Policy from time to time. We will notify you of any changes by posting
-                    the new Privacy Policy on this page and updating the "Last Updated" date.
+                    the new Privacy Policy on this page and updating the &quot;Last Updated&quot; date.
                   </p>
                 </section>
               </div>
@@ -236,11 +231,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-      
-      {/* External script tags for GSAP and Three.js */}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     </div>
   );
 }

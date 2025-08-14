@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 // Required external libraries for styling and icons are loaded via CDN.
 const headContent = `
@@ -115,13 +116,13 @@ export default function InfiniteAdCarousel() {
                 key={index}
                 className="w-full flex-shrink-0 relative bg-white rounded-lg shadow-lg"
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
+                  width={1200}
+                  height={400}
                   className="rounded-t-lg object-cover w-full h-80"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://placehold.co/1200x400/F59E0B/FFFFFF?text=Image+Error";
-                  }}
+                  onError={() => {}}
                 />
                 {/* Text and button below the image */}
                 <div className="p-6 text-center">

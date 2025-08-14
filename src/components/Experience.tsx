@@ -8,7 +8,7 @@ const headContent = `
   <script src="https://cdn.tailwindcss.com"></script>
 `;
 
-export default function CallToAction() {
+  export default function CallToAction() {
   return (
     <>
       <div dangerouslySetInnerHTML={{ __html: headContent }} />

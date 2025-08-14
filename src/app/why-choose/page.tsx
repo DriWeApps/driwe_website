@@ -184,11 +184,16 @@ function StatsSection() {
     { icon: Award, label: "Years of Service", value: 5, suffix: "+" },
   ];
 
+  // Call useCountUp for each stat outside the map callback
+  const count0 = useCountUp(stats[0].value, 2200);
+  const count1 = useCountUp(stats[1].value, 2200);
+  const count2 = useCountUp(stats[2].value, 2200);
+  const counts = [count0, count1, count2];
   return (
     <section className="bg-white py-16">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 text-center">
         {stats.map((s, i) => {
-          const n = useCountUp(s.value, 2200);
+          const n = counts[i];
           const display = s.decimals != null ? n.toFixed(s.decimals) : Math.round(n).toLocaleString();
           return (
             <Reveal key={s.label} delay={100 * i} y={30}>

@@ -2,6 +2,7 @@
 import { Car, Plane, Clock, Package, Building2, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function Home() {
   const services = [
@@ -122,7 +123,7 @@ export default function Home() {
             <button className="border border-black hover:border-none bg-[#fcd129] text-black shadow-xl hover:bg-yellow-500 hover:text- text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
               Book Now
             </button>
-            <button className="border border-black shadow-xl hover:text-black text-white text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-white hover:text-[#fcd129] ">
+            <button className="border border-black hover:border-none bg-[#fcd129] text-black shadow-xl hover:bg-yellow-500 hover:text- text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
               Learn More
             </button>
           </div>
@@ -203,9 +204,11 @@ export default function Home() {
               >
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <img
+                    <Image
                       src={testimonial.avatar}
                       alt={testimonial.name}
+                      width={48}
+                      height={48}
                       className="w-12 h-12 rounded-full object-cover mr-4"
                     />
                     <div>
@@ -225,7 +228,7 @@ export default function Home() {
                       : "Business Events"}
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    "{testimonial.content}"
+                    {testimonial.content}
                   </p>
                   <div className="flex items-center">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -261,9 +264,11 @@ export default function Home() {
                 className="hover:shadow-xl transition-all duration-300 bg-white overflow-hidden group"
               >
                 <div className="aspect-video overflow-hidden">
-                  <img
+                  <Image
                     src={vehicle.image}
                     alt={vehicle.type}
+                    width={400}
+                    height={225}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>

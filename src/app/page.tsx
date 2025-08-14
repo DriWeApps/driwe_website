@@ -1,40 +1,12 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import InfiniteAdCarousel from "@/components/InfiniteAdCarousel";
-import { Link } from "lucide-react";
 import Image from "next/image";
+import Download from "@/components/Download";
 
 gsap.registerPlugin(ScrollTrigger);
 
-  const fleet = [
-    {
-      type: "Compact",
-      description: "Perfect for 1-2 passengers",
-      image:
-        "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=2",
-    },
-    {
-      type: "Sedan",
-      description: "Comfortable for 3-4 passengers",
-      image:
-        "https://d2s8i866417m9.cloudfront.net/photo/23211775/photo/thumb-4da9e27d735cca63438b015ddaa77e3d.jpg",
-    },
-    {
-      type: "SUV",
-      description: "Spacious for 5-6 passengers",
-      image:
-        "https://images10.gaadi.com/usedcar_image/4697349/original/processed_0c6258998285c8813b7ec46d6efcbaa2.jpg?imwidth=420",
-    },
-    {
-      type: "Auto",
-      description: "Budget-friendly for 2-3 passengers",
-      image:
-        "https://truckcdn.cardekho.com/in/bajaj/compact-4s/bajaj-compact-4s-48935.jpg",
-    },
-  ];
 export default function LandingPage() {
   const sectionsRef = useRef<HTMLDivElement[]>([]);
   const journeyRefs = useRef<HTMLDivElement[]>([]);
@@ -164,40 +136,9 @@ export default function LandingPage() {
             }
           `}</style>
         </section>
-
-      {/* Fleet Section */}
-      <section ref={(el) => setRef(el as HTMLDivElement | null, 3)} id="fleet" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Fleet
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {fleet.map((vehicle, index) => (
-              <Card
-                key={index}
-                className="hover:shadow-xl transition-all duration-300 bg-white overflow-hidden group"
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={vehicle.image}
-                    alt={vehicle.type}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {vehicle.type}
-                  </h3>
-                  <p className="text-gray-600">{vehicle.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div>
+        <Download />
+      </div>
     </div>
   );
 }

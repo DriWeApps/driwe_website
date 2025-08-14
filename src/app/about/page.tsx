@@ -1,10 +1,11 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 
 declare global {
   interface Window {
-    gsap: any;
-    ScrollTrigger: any;
+    gsap: typeof import("gsap");
+    ScrollTrigger: typeof import("gsap/ScrollTrigger");
   }
 }
 
@@ -251,9 +252,11 @@ From quick city rides to long journeys. We focus on making travel simpler, faste
                 key={i}
                 className="bg-white rounded-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-rotate-1 hover:-translate-y-1"
               >
-                <img
+                <Image
                   src={person.img}
                   alt={person.name}
+                  width={96}
+                  height={96}
                   className="mx-auto rounded-full mb-3 w-24 h-24 object-cover"
                 />
                 <h5 className="font-bold text-lg mb-1">{person.name}</h5>
@@ -293,7 +296,7 @@ From quick city rides to long journeys. We focus on making travel simpler, faste
                 key={i}
                 className="bg-white rounded-lg p-6 shadow-md text-center hover:shadow-xl hover:scale-105 transition-transform duration-300 hover:-translate-y-1"
               >
-                <p className="italic text-sm mb-4">"{review.text}"</p>
+                <p className="italic text-sm mb-4">{review.text}</p>
                 <h5 className="font-bold text-lg">{review.name}</h5>
               </div>
             ))}

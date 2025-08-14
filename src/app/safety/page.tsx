@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
+
 declare global {
   interface Window {
-    THREE: any;
-    gsap: any;
-    ScrollTrigger: any;
+    gsap: typeof import("gsap");
+    ScrollTrigger: typeof import("gsap/ScrollTrigger");
+    THREE: typeof import("three");
   }
 }
-
 // We will use the global Three.js object, loaded via CDN
 const headContent = `
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -69,7 +69,7 @@ export default function SafetyPage() {
 
       return () => {
         window.removeEventListener('resize', handleResize);
-        window.removeEventListener('mousemove', onDocumentMouseMove);
+  // window.removeEventListener('mousemove', onDocumentMouseMove);
       };
     }
   }, []);
@@ -129,7 +129,7 @@ export default function SafetyPage() {
               Our Commitment to Your Safety
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              Your safety is our top priority. We're dedicated to building a secure platform for every ride.
+              Your safety is our top priority. We&apos;re dedicated to building a secure platform for every ride.
             </p>
           </section>
 
@@ -179,8 +179,5 @@ export default function SafetyPage() {
       </main>
     </>
   );
-}
-function onDocumentMouseMove(this: Window, ev: MouseEvent) {
-  throw new Error("Function not implemented.");
 }
 
