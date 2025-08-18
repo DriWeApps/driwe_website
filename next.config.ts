@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
       "images10.gaadi.com",
       "truckcdn.cardekho.com"
     ]
-  }
+  },
 };
 
 export default nextConfig;
