@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/Scroll";
 import Experience from "@/components/Experience";
+import { ThemeProvider } from "next-themes";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -29,11 +30,13 @@ export default function RootLayout({
         className={`${poppins.variable} ${poppins.variable} antialiased`}
         suppressHydrationWarning
       >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Header />
           <main className="flex-1 w-full">{children}</main>
         <ScrollToTopButton />
         <Experience />
         <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
