@@ -80,6 +80,7 @@ export default function LandingPage() {
         "Book a car for multiple hours or an entire day for meetings, shopping, sightseeing, or any special plans. Enjoy a flexible, comfortable, and stress-free travel experience tailored to your needs.",
       img: "/images/fullday2.png",
     },
+    //
   ];
 
   return (
