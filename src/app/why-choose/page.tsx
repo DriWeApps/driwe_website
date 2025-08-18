@@ -122,59 +122,59 @@ function FeatureCard({
 /* ----------------------- service highlights ----------------------- */
 function ServiceHighlights() {
   const highlights = [
-    { icon: Shield, title: "Verified Drivers", description: "All drivers undergo background checks and verification.", bgColor: "bg-yellow-50" },
-    { icon: DollarSign, title: "Transparent Pricing", description: "No hidden charges. See exact fare before you book.", bgColor: "bg-yellow-50" },
-    { icon: Clock, title: "24/7 Support", description: "Round-the-clock customer support for any assistance.", bgColor: "bg-yellow-50" },
-    { icon: Zap, title: "Quick Booking", description: "Get a ride in minutes with our instant system.", bgColor: "bg-yellow-50" },
+    {
+      icon: Shield,
+      title: "Verified Drivers",
+      description:
+        "Every driver is background-checked and verified for your safety.",
+    },
+    {
+      icon: DollarSign,
+      title: "Transparent Pricing",
+      description: "No hidden fees — know your fare upfront before booking.",
+    },
+    {
+      icon: Clock,
+      title: "24/7 Support",
+      description:
+        "Always here for you with round-the-clock customer assistance.",
+    },
+    {
+      icon: Zap,
+      title: "Quick Booking",
+      description:
+        "Book instantly and get a ride in just minutes — fast and hassle-free.",
+    },
   ];
 
   return (
-    <section className="relative py-20 bg-white">
-      <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-yellow-400 transform -translate-x-1/2"></div>
+    <section className="py-20 bg-yellow-50">
       <div className="max-w-6xl mx-auto px-6">
-        {highlights.map((item, index) => {
-          const isLeft = index % 2 === 0;
-          return (
-            <Reveal key={item.title} delay={100 * index} x={isLeft ? -50 : 50}>
-              <div className="mb-12 flex flex-col md:flex-row items-center w-full">
-                {/* Left side */}
-                <div className={`w-full md:w-1/2 ${isLeft ? "md:pr-8 md:text-right" : "md:pr-8 md:invisible"}`}>
-                  {isLeft && (
-                    <div className={`${item.bgColor} rounded-xl shadow-lg p-6 inline-block max-w-sm transition-transform duration-500 hover:scale-[1.05] hover:shadow-2xl`}>
-                      <div className="flex items-center mb-3">
-                        <item.icon className="w-8 h-8 text-yellow-500 mr-3" />
-                        <h3 className="text-lg font-semibold">{item.title}</h3>
-                      </div>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
-                    </div>
-                  )}
-                </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Why Ride With Us?
+        </h2>
 
-                {/* Marker */}
-                <div className="hidden md:block w-0 relative">
-                  <div className={`absolute ${isLeft ? "-translate-x-[27%]" : "translate-x-[-27%]"} left-1/2 w-6 h-6 bg-yellow-400 rounded-full border-4 border-yellow-200`}></div>
-                </div>
-
-                {/* Right side */}
-                <div className={`w-full md:w-1/2 ${!isLeft ? "md:pl-8 md:text-left" : "md:pl-8 md:invisible"}`}>
-                  {!isLeft && (
-                    <div className={`${item.bgColor} rounded-xl shadow-lg p-6 inline-block max-w-sm transition-transform duration-500 hover:scale-[1.05] hover:shadow-2xl`}>
-                      <div className="flex items-center mb-3">
-                        <item.icon className="w-8 h-8 text-yellow-500 mr-3" />
-                        <h3 className="text-lg font-semibold">{item.title}</h3>
-                      </div>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
-                    </div>
-                  )}
-                </div>
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {highlights.map((item) => (
+            <div
+              key={item.title}
+              className="bg-white rounded-2xl shadow-lg p-6 text-center transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="flex justify-center items-center mb-4">
+                <item.icon className="w-10 h-10 text-yellow-500" />
               </div>
-            </Reveal>
-          );
-        })}
+              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+              <p className="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
+
+// export default ServiceHighlights;
 
 /* ----------------------- stats section ----------------------- */
 function StatsSection() {
