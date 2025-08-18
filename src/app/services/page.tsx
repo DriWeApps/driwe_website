@@ -24,7 +24,7 @@ export default function Home() {
       icon: Car,
       title: "Auto Rickshaw",
       description:
-        "Budget-friendly three-wheeler rides for short distances and narrow lanes.",  
+        "Budget-friendly three-wheeler rides for short distances and narrow lanes.",
       color: "bg-orange-100 text-orange-600",
     },
     {
@@ -80,32 +80,32 @@ export default function Home() {
     },
   ];
 
-  const fleet = [
-    {
-      type: "Compact",
-      description: "Perfect for 1-2 passengers",
-      image:
-        "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=2",
-    },
-    {
-      type: "Sedan",
-      description: "Comfortable for 3-4 passengers",
-      image:
-        "https://d2s8i866417m9.cloudfront.net/photo/23211775/photo/thumb-4da9e27d735cca63438b015ddaa77e3d.jpg",
-    },
-    {
-      type: "SUV",
-      description: "Spacious for 5-6 passengers",
-      image:
-        "https://images10.gaadi.com/usedcar_image/4697349/original/processed_0c6258998285c8813b7ec46d6efcbaa2.jpg?imwidth=420",
-    },
-    {
-      type: "Auto",
-      description: "Budget-friendly for 2-3 passengers",
-      image:
-        "https://truckcdn.cardekho.com/in/bajaj/compact-4s/bajaj-compact-4s-48935.jpg",
-    },
-  ];
+  // const fleet = [
+  //   {
+  //     type: "Compact",
+  //     description: "Perfect for 1-2 passengers",
+  //     image:
+  //       "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=2",
+  //   },
+  //   {
+  //     type: "Sedan",
+  //     description: "Comfortable for 3-4 passengers",
+  //     image:
+  //       "https://d2s8i866417m9.cloudfront.net/photo/23211775/photo/thumb-4da9e27d735cca63438b015ddaa77e3d.jpg",
+  //   },
+  //   {
+  //     type: "SUV",
+  //     description: "Spacious for 5-6 passengers",
+  //     image:
+  //       "https://images10.gaadi.com/usedcar_image/4697349/original/processed_0c6258998285c8813b7ec46d6efcbaa2.jpg?imwidth=420",
+  //   },
+  //   {
+  //     type: "Auto",
+  //     description: "Budget-friendly for 2-3 passengers",
+  //     image:
+  //       "https://truckcdn.cardekho.com/in/bajaj/compact-4s/bajaj-compact-4s-48935.jpg",
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -119,7 +119,7 @@ export default function Home() {
             From quick city rides to fleet delivery services, we offer every
             transportation need covered.
           </p>
-           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="border border-black hover:border-none bg-[#fcd129] text-black shadow-xl hover:bg-yellow-500 hover:text- text-sm px-8 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
               Book Now
             </button>
@@ -153,7 +153,7 @@ export default function Home() {
               Choose Your Service
             </h2>
           </div>
-
+          {/*}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card
@@ -175,11 +175,43 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     
                       {/* <span className="text-sm font-medium text-gray-500">{service.price}</span> */}
-                      <Button className="bg-[#fcd129] border border-black  from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black text-sm px-4 py-2 rounded-lg transition-all duration-300">
+          {/* <Button className="bg-[#fcd129] border border-black  from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black text-sm px-4 py-2 rounded-lg transition-all duration-300 items-center">
                         Book Now
-                      </Button>
-                    
+                      </Button> */}
+
+          {/* </div>
+                </CardContent>
+              </Card>
+            ))} */}
+          {/* </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card
+                key={index}
+                className="group hover:shadow-xxl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0"
+              >
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  {/* Icon */}
+                  <div
+                    className={`w-16 h-16 ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <service.icon className="h-8 w-8" />
                   </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Button */}
+                  <Button className="bg-[#fcd129] border border-black from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black text-sm px-4 py-2 rounded-lg transition-all duration-300">
+                    Book Now
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -196,7 +228,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
@@ -224,12 +256,68 @@ export default function Home() {
                     {testimonial.name.includes("Priya")
                       ? "Daily Commuter"
                       : testimonial.name.includes("Rajesh")
-                      ? "Airport Transfer"
-                      : "Business Events"}
+                        ? "Airport Transfer"
+                        : "Business Events"}
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {testimonial.content}
                   </p>
+                  <div className="flex items-center">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-4 w-4 text-yellow-400 fill-current"
+                      />
+                    ))}
+                    <span className="ml-2 text-sm font-medium text-gray-600">
+                      5.0
+                    </span>
+                  </div> *
+                </CardContent>
+              </Card>
+            ))}
+          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card
+                key={index}
+                className="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl bg-white"
+              >
+                <CardContent className="p-6">
+                  {/* Avatar + Name */}
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 rounded-full object-cover mr-4"
+                    />
+                    <div>
+                      <h4 className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-bold text-gray-900 mb-3">
+                    {testimonial.name.includes("Priya")
+                      ? "Daily Commuter"
+                      : testimonial.name.includes("Rajesh")
+                        ? "Airport Transfer"
+                        : "Business Events"}
+                  </h3>
+
+                  {/* Content */}
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {testimonial.content}
+                  </p>
+
+                  {/* Rating */}
                   <div className="flex items-center">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
@@ -245,11 +333,12 @@ export default function Home() {
               </Card>
             ))}
           </div>
+
         </div>
       </section>
 
       {/* Fleet Section */}
-      <section id="fleet" className="py-20 bg-gray-50">
+      {/* <section id="fleet" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -279,10 +368,10 @@ export default function Home() {
                   <p className="text-gray-600">{vehicle.description}</p>
                 </CardContent>
               </Card>
-            ))}
+            ))} 
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
